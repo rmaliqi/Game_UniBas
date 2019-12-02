@@ -18,7 +18,7 @@ contract Game {
     uint public costOfAttack   = 1 ether;               // Cost of attacking, will keep in the jackpot for next rounds ie: guarantees that jackpot never empty for future rounds
     uint public minimumAttack  = 1 ether;               // Minimum bet allowed
     uint minimumTheta          = 20;                    // Percentage of needed players to execute a successful attack
-    uint public minimumPlayers = 0;                     // minimum amount of players needed to play 
+    uint public minimumPlayers = 1;                     // minimum amount of players needed to play 
     uint private Confirmed     = 0;                     // Players that have already confirmed
     uint public nbPlayers      = 0;                     // Number of Players is zero at the beginning
     uint public jackpot        = address(this).balance; // Remaining funds
