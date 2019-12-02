@@ -29,7 +29,7 @@ contract Game {
     uint256 private T1         = 100000000000000;       // Aprox. time when minimum amount of players have commited plus the confirmation time  
     uint256 private dt         = 10 seconds;            // Waiting time, time available to add new players even though the minimum amount of players already commited
     uint256 private dt2        = 300 seconds;           // Time given to Confirm (usefull to stop stalling scenarios, makes sure the system changes if some player thinks it is stalled by confirming again)
-    uint public Theta         = 101;                   // The fundamental, "Resistance of the system" ie: Percentage of attackers needed to have a succesfull attack
+    uint private Theta         = 101;                   // The fundamental, "Resistance of the system" ie: Percentage of attackers needed to have a succesfull attack
     
     
     modifier betHigherThanMinimumAttack{              // Requirement needed for playing (player's bet or "lie bet" must be higher than the minimum allowed)  
@@ -63,7 +63,7 @@ contract Game {
     }
 
     function AA_CommitDecision(bytes32 _hashedBetDecisionPw) public payable betHigherThanMinimumAttack {  
-        jackpot = address(this).balance;                         // Actualize jackpot
+        //jackpot = address(this).balance;                         // Actualize jackpot
         if(state == State.Active || state == State.Waiting) {    // Check for correct state
             if(playerCommit[msg.sender] == 0) {                  // Check if a player has not already commited
                 
@@ -90,9 +90,9 @@ contract Game {
         }
         
         // I would remove the following (adding noise to the system) and put the state as a public variable (we so incentivice not playing when you shouldn't) 
-        if(state == State.Close || state == State.Distribute || state == State.DistributeWaiting || playerCommit[msg.sender] > 0) {  // Check if the player tried to commit in a wrong stage or already has a commit     
-            msg.sender.transfer(msg.value);                                                                                          // Return the ether to the players 
-        }                   
+        //if(state == State.Close || state == State.Distribute || state == State.DistributeWaiting || playerCommit[msg.sender] > 0) {  // Check if the player tried to commit in a wrong stage or already has a commit     
+        //    msg.sender.transfer(msg.value);                                                                                          // Return the ether to the players 
+        //}                   
     }
     
     
