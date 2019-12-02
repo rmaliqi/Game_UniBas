@@ -1,0 +1,16 @@
+Team Member Names & Student IDs
+********************************
+Jeremias Lenzi, xx-xxx-xxx
+Ramazan Maliqi, 11-730-488
+
+Contract Deployment Address
+********************************
+0x....
+
+Bytecode
+********************************
+0x....
+
+ABI
+********************************
+0x....
