@@ -3,7 +3,7 @@ Team Member Names & Student IDs
 Jeremias Lenzi, 19-065-721
 Ramazan Maliqi, 11-730-488
 
-Contract Deployment Address
+Contract Deployment Address (Rinkeby)
 ********************************************************************************************************************************
 0x5d75b583ed68b0c10e384af70a3d60618399e2e9
 
